@@ -15,6 +15,8 @@
 		28A9F4E11D9C3AB400B1B865 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28A9F4DF1D9C3AB400B1B865 /* Main.storyboard */; };
 		28A9F4E31D9C3AB400B1B865 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28A9F4E21D9C3AB400B1B865 /* Assets.xcassets */; };
 		28A9F4E61D9C3AB400B1B865 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28A9F4E41D9C3AB400B1B865 /* LaunchScreen.storyboard */; };
+		28A9F5161D9C4B9400B1B865 /* ToDo+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A9F5131D9C4B9400B1B865 /* ToDo+CoreDataClass.m */; };
+		28A9F5171D9C4B9400B1B865 /* ToDo+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A9F5151D9C4B9400B1B865 /* ToDo+CoreDataProperties.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,11 @@
 		28A9F4E21D9C3AB400B1B865 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		28A9F4E51D9C3AB400B1B865 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		28A9F4E71D9C3AB400B1B865 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28A9F4FE1D9C464300B1B865 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		28A9F5121D9C4B9400B1B865 /* ToDo+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ToDo+CoreDataClass.h"; sourceTree = "<group>"; };
+		28A9F5131D9C4B9400B1B865 /* ToDo+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ToDo+CoreDataClass.m"; sourceTree = "<group>"; };
+		28A9F5141D9C4B9400B1B865 /* ToDo+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ToDo+CoreDataProperties.h"; sourceTree = "<group>"; };
+		28A9F5151D9C4B9400B1B865 /* ToDo+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ToDo+CoreDataProperties.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +56,7 @@
 			children = (
 				28A9F4CF1D9C3AB400B1B865 /* EveryDoItAnotherTime */,
 				28A9F4CE1D9C3AB400B1B865 /* Products */,
+				28A9F4FD1D9C464300B1B865 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,17 +71,10 @@
 		28A9F4CF1D9C3AB400B1B865 /* EveryDoItAnotherTime */ = {
 			isa = PBXGroup;
 			children = (
-				28A9F4D31D9C3AB400B1B865 /* AppDelegate.h */,
-				28A9F4D41D9C3AB400B1B865 /* AppDelegate.m */,
-				28A9F4D91D9C3AB400B1B865 /* MasterViewController.h */,
-				28A9F4DA1D9C3AB400B1B865 /* MasterViewController.m */,
-				28A9F4DC1D9C3AB400B1B865 /* DetailViewController.h */,
-				28A9F4DD1D9C3AB400B1B865 /* DetailViewController.m */,
-				28A9F4DF1D9C3AB400B1B865 /* Main.storyboard */,
-				28A9F4E21D9C3AB400B1B865 /* Assets.xcassets */,
-				28A9F4E41D9C3AB400B1B865 /* LaunchScreen.storyboard */,
-				28A9F4E71D9C3AB400B1B865 /* Info.plist */,
-				28A9F4D61D9C3AB400B1B865 /* EveryDoItAnotherTime.xcdatamodeld */,
+				28A9F4F01D9C3B0000B1B865 /* Model */,
+				28A9F4EE1D9C3ADB00B1B865 /* View */,
+				28A9F4ED1D9C3AD200B1B865 /* Controller */,
+				28A9F4EF1D9C3AF400B1B865 /* App */,
 				28A9F4D01D9C3AB400B1B865 /* Supporting Files */,
 			);
 			path = EveryDoItAnotherTime;
@@ -85,6 +86,57 @@
 				28A9F4D11D9C3AB400B1B865 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		28A9F4ED1D9C3AD200B1B865 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				28A9F4D91D9C3AB400B1B865 /* MasterViewController.h */,
+				28A9F4DA1D9C3AB400B1B865 /* MasterViewController.m */,
+				28A9F4DC1D9C3AB400B1B865 /* DetailViewController.h */,
+				28A9F4DD1D9C3AB400B1B865 /* DetailViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		28A9F4EE1D9C3ADB00B1B865 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				28A9F4DF1D9C3AB400B1B865 /* Main.storyboard */,
+				28A9F4E21D9C3AB400B1B865 /* Assets.xcassets */,
+				28A9F4E41D9C3AB400B1B865 /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		28A9F4EF1D9C3AF400B1B865 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				28A9F4D31D9C3AB400B1B865 /* AppDelegate.h */,
+				28A9F4D41D9C3AB400B1B865 /* AppDelegate.m */,
+				28A9F4E71D9C3AB400B1B865 /* Info.plist */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		28A9F4F01D9C3B0000B1B865 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				28A9F5121D9C4B9400B1B865 /* ToDo+CoreDataClass.h */,
+				28A9F5131D9C4B9400B1B865 /* ToDo+CoreDataClass.m */,
+				28A9F5141D9C4B9400B1B865 /* ToDo+CoreDataProperties.h */,
+				28A9F5151D9C4B9400B1B865 /* ToDo+CoreDataProperties.m */,
+				28A9F4D61D9C3AB400B1B865 /* EveryDoItAnotherTime.xcdatamodeld */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		28A9F4FD1D9C464300B1B865 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				28A9F4FE1D9C464300B1B865 /* CoreData.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +215,8 @@
 				28A9F4D81D9C3AB400B1B865 /* EveryDoItAnotherTime.xcdatamodeld in Sources */,
 				28A9F4D51D9C3AB400B1B865 /* AppDelegate.m in Sources */,
 				28A9F4D21D9C3AB400B1B865 /* main.m in Sources */,
+				28A9F5171D9C4B9400B1B865 /* ToDo+CoreDataProperties.m in Sources */,
+				28A9F5161D9C4B9400B1B865 /* ToDo+CoreDataClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
